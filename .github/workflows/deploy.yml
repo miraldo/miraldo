@@ -13,13 +13,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install resume-cli
         run: npm install -g resume-cli jsonresume-theme-flat
 
+      - name: Install resume-cli
+        run: npm install -g resume-cli jsonresume-theme-onepage
+
       - name: Build resume
-        run: resume export index.html --theme flat
+        run: resume export index.html --theme onepage
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
