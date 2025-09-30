@@ -16,10 +16,10 @@ jobs:
           node-version: 22
 
       - name: Install resume-cli
-        run: npm install -g resume-cli jsonresume-theme-flat
+        run: npm install -g resume-cli
 
       - name: Install resume-cli
-        run: npm install -g resume-cli jsonresume-theme-onepage
+        run: npm i jsonresume-theme-onepage
 
       - name: Build resume
         run: resume export index.html --theme onepage
